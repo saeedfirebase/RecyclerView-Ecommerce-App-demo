@@ -1,13 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+
+    <ImageView
+        android:id="@+id/bannerId"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:src="@drawable/banner" />
+
     <androidx.recyclerview.widget.RecyclerView
+        android:padding="20dp"
         android:id="@+id/recyclerviewId"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bannerId"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="20dp"
+        android:id="@+id/recyclerviewId2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recyclerviewId"
+        android:layout_marginTop="10dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:menu="@menu/menu_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+       android:background="#4CAF50"
+        />
+
+
+</RelativeLayout>

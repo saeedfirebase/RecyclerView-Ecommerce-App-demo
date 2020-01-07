@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.ActionMenuView;
 
 import com.example.recycleviewpractice.adapter.MovieAdapter;
 import com.example.recycleviewpractice.utils.DataGenerator;
@@ -28,4 +29,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
     }
+
+
 }
